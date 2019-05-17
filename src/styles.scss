@@ -1,8 +1,13 @@
 @import "reset.scss";
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 a:link,
 a:visited {
   color: initial;
   text-decoration: none;
+}
+
+.body-container {
+  background-color: #ebebeb;
+  height: calc(100vh - 64px);
 }

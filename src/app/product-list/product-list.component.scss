@@ -1,0 +1,11 @@
+.products-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0 10px;
+}
+
+.product-wrapper {
+  flex: 0 1 25%;
+  min-width: 300px;
+}

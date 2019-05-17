@@ -4,13 +4,14 @@ import { MatToolbarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { EditProductsComponent } from './admin/edit-products/edit-products.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
-import { ContactComponent } from './contact/contact.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
@@ -20,9 +21,9 @@ import { ProductComponent } from './product/product.component';
     AppComponent,
     NavBarComponent,
     ProductComponent,
-    ContactComponent,
     CartComponent,
-    ProductListComponent
+    ProductListComponent,
+    EditProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +33,8 @@ import { ProductComponent } from './product/product.component';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
