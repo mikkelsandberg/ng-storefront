@@ -8,11 +8,17 @@ import { IProduct } from './product';
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'api/products.json';
+  private baseUrl = 'http://localhost';
+  private port = '3000';
+  private path = {
+    products: 'products'
+  };
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(this.productsUrl);
+  getProductList(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(
+      `${this.baseUrl}:${this.port}/${this.path.products}`
+    );
   }
 }
