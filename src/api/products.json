@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Item 1",
+    "description": "Reprehenderit duis in do aute tempor duis eiusmod nisi.",
+    "price": 19.99
+  },
+  {
+    "id": 2,
+    "name": "Item 2",
+    "description": "Dolor fugiat ipsum aliqua proident voluptate.",
+    "price": 4.99
+  }
+]
