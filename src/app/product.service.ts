@@ -10,7 +10,7 @@ import { IProduct } from './product';
 export class ProductService {
   private baseUrl = 'http://localhost';
   private port = '3000';
-  private path = {
+  private paths = {
     products: 'products'
   };
 
@@ -18,7 +18,15 @@ export class ProductService {
 
   getProductList(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(
-      `${this.baseUrl}:${this.port}/${this.path.products}`
+      `${this.baseUrl}:${this.port}/${this.paths.products}`
+    );
+  }
+
+  postNewProduct(newProduct: IProduct): Observable<IProduct> {
+    console.log('new product:', newProduct);
+    return this.http.post<IProduct>(
+      `${this.baseUrl}:${this.port}/${this.paths.products}`,
+      newProduct
     );
   }
 }
