@@ -23,7 +23,6 @@ export class ProductService {
   }
 
   postNewProduct(newProduct: IProduct): Observable<IProduct> {
-    console.log('new product:', newProduct);
     return this.http.post<IProduct>(
       `${this.baseUrl}:${this.port}/${this.paths.products}`,
       newProduct

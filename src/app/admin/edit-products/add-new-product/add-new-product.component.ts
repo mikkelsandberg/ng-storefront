@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { IProduct } from 'src/app/product';
 import { ProductService } from 'src/app/product.service';
 
@@ -9,27 +9,21 @@ import { ProductService } from 'src/app/product.service';
   styleUrls: ['./add-new-product.component.scss']
 })
 export class AddNewProductComponent implements OnInit {
-  private currentProductList: IProduct[];
-  newProductForm = new FormGroup({
-    name: new FormControl(''),
-    description: new FormControl(''),
-    price: new FormControl('')
-  });
+  newProduct: IProduct = {
+    name: null,
+    description: null,
+    price: null
+  };
 
   constructor(private productService: ProductService) {}
 
-  ngOnInit() {
-    this.productService
-      .getProductList()
-      .subscribe(res => (this.currentProductList = res));
-  }
+  ngOnInit() {}
 
-  onSubmitNewProduct() {
-    const updatedNewProduct = {
-      ...this.newProductForm.value,
-      id: this.currentProductList.length + 1
-    };
-
-    this.productService.postNewProduct(updatedNewProduct);
+  onSubmitNewProduct(newProductForm: NgForm) {
+    if (newProductForm.valid) {
+      this.productService
+        .postNewProduct(this.newProduct)
+        .subscribe(data => console.log('new data added:', data));
+    }
   }
 }

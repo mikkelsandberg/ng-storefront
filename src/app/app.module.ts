@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -32,6 +32,7 @@ import { ProductComponent } from './product/product.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -40,7 +41,6 @@ import { ProductComponent } from './product/product.component';
     MatCardModule,
     HttpClientModule,
     MatMenuModule,
-    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule
   ],

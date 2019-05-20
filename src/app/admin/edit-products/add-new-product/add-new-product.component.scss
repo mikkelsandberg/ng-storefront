@@ -1,0 +1,26 @@
+.add-new-product-wrapper {
+  padding: 20px;
+}
+
+.add-new-product-form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+
+  & > button {
+    grid-row-start: 3;
+    justify-self: start;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .add-new-product-form {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+
+    & > button {
+      grid-row-start: 4;
+    }
+  }
+}
