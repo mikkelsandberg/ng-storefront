@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { IProduct } from '../product';
 import { ProductService } from '../product.service';
@@ -9,6 +9,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+  @Input() viewAsAdmin: boolean;
   products: IProduct[];
 
   constructor(private productService: ProductService) {}

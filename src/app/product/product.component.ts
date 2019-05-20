@@ -9,6 +9,7 @@ import { IProduct } from '../product';
 })
 export class ProductComponent implements OnInit {
   @Input() product: IProduct;
+  @Input() viewAsAdmin: boolean;
 
   constructor() {}
 

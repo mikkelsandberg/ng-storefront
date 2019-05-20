@@ -1,18 +1,18 @@
-<div class="add-new-product-wrapper">
-  <h1>Add a new product</h1>
-  <form class="add-new-product-form" #newProductForm="ngForm" (ngSubmit)="onSubmitNewProduct(newProductForm)">
-    <mat-form-field>
-      <input matInput placeholder="Product name" id="name" type="text" required [(ngModel)]="newProduct.name"
-        name="name">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Product description" id="description" type="text" required
-        [(ngModel)]="newProduct.description" name="description">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Product price" id="price" type="number" required [(ngModel)]="newProduct.price"
-        name="price">
-    </mat-form-field>
-    <button mat-raised-button color="accent" type="submit">Submit</button>
-  </form>
-</div>
+  <div class="add-new-product-wrapper">
+    <h1>Add a new product</h1>
+    <form class="add-new-product-form" #newProductForm="ngForm" (ngSubmit)="onSubmitNewProduct(newProductForm)">
+      <mat-form-field>
+        <input matInput placeholder="Product name" id="name" type="text" required [(ngModel)]="newProduct.name"
+          name="name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Product description" id="description" type="text" required
+          [(ngModel)]="newProduct.description" name="description">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Product price" id="price" type="number" required [(ngModel)]="newProduct.price"
+          name="price">
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit">Submit</button>
+    </form>
+  </div>
