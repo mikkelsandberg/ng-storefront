@@ -10,8 +10,21 @@ import { IProduct } from '../product';
 export class ProductComponent implements OnInit {
   @Input() product: IProduct;
   @Input() viewAsAdmin: boolean;
+  showEditButton = false;
 
   constructor() {}
 
   ngOnInit() {}
+
+  onMouseOverProductCard() {
+    if (this.viewAsAdmin) {
+      this.showEditButton = true;
+    }
+  }
+
+  onMouseOutProductCard() {
+    if (this.viewAsAdmin) {
+      this.showEditButton = false;
+    }
+  }
 }

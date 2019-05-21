@@ -1,4 +1,22 @@
 .mat-card {
   box-sizing: border-box;
-  margin: 20px 10px 0;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .mat-card-title {
+    margin-bottom: 0;
+  }
+
+  .edit-button {
+    visibility: hidden;
+
+    &.show-edit-button {
+      visibility: visible;
+    }
+  }
 }
