@@ -25,7 +25,24 @@ export class ProductService {
   postNewProduct(newProduct: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>(
       `${this.baseUrl}:${this.port}/${this.paths.products}`,
-      newProduct
+      newProduct,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+  }
+
+  editProduct(productId: number, product: IProduct): Observable<IProduct> {
+    return this.http.put<IProduct>(
+      `${this.baseUrl}:${this.port}/${this.paths.products}/${productId}`,
+      product,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
     );
   }
 }

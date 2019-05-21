@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/product.service';
 })
 export class AddNewProductComponent implements OnInit {
   newProduct: IProduct = {
+    id: null,
     name: null,
     description: null,
     price: null

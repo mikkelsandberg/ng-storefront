@@ -1,13 +1,14 @@
 <mat-card (mouseover)="onMouseOverProductCard()" (mouseout)="onMouseOutProductCard()">
   <mat-card-header class="product-header">
     <mat-card-title>{{ product.name }}</mat-card-title>
-    <button [ngClass]="{'show-edit-button': viewAsAdmin && showEditButton}" class="edit-button"
-      mat-raised-button>Edit</button>
+    <button [ngClass]="{'show-edit-button': viewAsAdmin && showEditButton}" class="edit-button" mat-raised-button
+      (click)="openEditProductDialog()">Edit</button>
   </mat-card-header>
   <mat-card-content>
     {{ product.description }}
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="accent">{{ product.price | currency }}</button>
+    <button mat-raised-button color="accent" [ngClass]="{'disable-price-button': viewAsAdmin}"
+      (click)="addProductToCart()">{{ product.price | currency }}</button>
   </mat-card-actions>
 </mat-card>

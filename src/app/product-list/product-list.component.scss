@@ -3,3 +3,9 @@
   grid-template: auto / calc(50% - 10px) calc(50% - 10px);
   gap: 20px;
 }
+
+@media screen and (max-width: 550px) {
+  .products-wrapper {
+    grid-template: auto / auto;
+  }
+}
