@@ -13,6 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AddNewProductComponent } from './admin/edit-products/add-new-product/add-new-product.component';
+import { DeleteProductDialogComponent } from './admin/edit-products/delete-product-dialog/delete-product-dialog.component';
 import { EditProductDialogComponent } from './admin/edit-products/edit-product-dialog/edit-product-dialog.component';
 import { EditProductsComponent } from './admin/edit-products/edit-products.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +32,8 @@ import { ProductComponent } from './product/product.component';
     ProductListComponent,
     EditProductsComponent,
     AddNewProductComponent,
-    EditProductDialogComponent
+    EditProductDialogComponent,
+    DeleteProductDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { ProductComponent } from './product/product.component';
     MatInputModule,
     MatDialogModule
   ],
-  entryComponents: [EditProductDialogComponent],
+  entryComponents: [EditProductDialogComponent, DeleteProductDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

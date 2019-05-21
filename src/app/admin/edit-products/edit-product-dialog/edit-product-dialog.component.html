@@ -1,1 +1,19 @@
 <h2 mat-dialog-title>Edit product</h2>
+<div mat-dialog-content>
+  <form class="edit-product-form" #editProductForm="ngForm" (ngSubmit)="editProduct(editProductForm)">
+    <mat-form-field>
+      <input matInput placeholder="Product name" id="name" type="text" required [(ngModel)]="data.name" name="name"
+        value="data.name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Product price" id="price" type="number" required [(ngModel)]="data.price"
+        name="price" value={{data.price}}>
+    </mat-form-field>
+    <mat-form-field id="edit-product-description">
+      <textarea matInput placeholder="Product description" id="description" type="text" required rows="5"
+        [(ngModel)]="data.description" name="description" value="data.description"></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="button" (click)="editProductDialogRef.close()">Cancel</button>
+    <button mat-raised-button color="accent" type="submit">Submit</button>
+  </form>
+</div>

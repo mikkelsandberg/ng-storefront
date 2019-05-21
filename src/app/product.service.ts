@@ -45,4 +45,15 @@ export class ProductService {
       }
     );
   }
+
+  deleteProduct(productId: number): Observable<IProduct> {
+    return this.http.delete<IProduct>(
+      `${this.baseUrl}:${this.port}/${this.paths.products}/${productId}`,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+  }
 }

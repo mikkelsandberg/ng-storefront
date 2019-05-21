@@ -12,15 +12,25 @@
     margin-bottom: 0;
   }
 
-  .edit-button {
-    visibility: hidden;
+  .admin-buttons {
+    button {
+      visibility: hidden;
 
-    &.show-edit-button {
-      visibility: visible;
+      &.delete-button {
+        padding: 0 6px;
+        margin-left: 20px;
+        min-width: initial;
+      }
+    }
+
+    &.show-admin-buttons {
+      button {
+        visibility: visible;
+      }
     }
   }
 }
 
 .disable-price-button {
-  cursor: not-allowed;
+  pointer-events: none;
 }

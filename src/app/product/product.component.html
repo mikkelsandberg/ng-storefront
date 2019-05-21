@@ -1,8 +1,12 @@
 <mat-card (mouseover)="onMouseOverProductCard()" (mouseout)="onMouseOutProductCard()">
   <mat-card-header class="product-header">
     <mat-card-title>{{ product.name }}</mat-card-title>
-    <button [ngClass]="{'show-edit-button': viewAsAdmin && showEditButton}" class="edit-button" mat-raised-button
-      (click)="openEditProductDialog()">Edit</button>
+    <div class="admin-buttons" [ngClass]="{'show-admin-buttons': viewAsAdmin && showAdminButtons}">
+      <button class="edit-button" mat-raised-button (click)="openEditProductDialog()">Edit</button>
+      <button class="delete-button" mat-raised-button (click)="deleteProduct()">
+        <mat-icon color="warn">delete_outline</mat-icon>
+      </button>
+    </div>
   </mat-card-header>
   <mat-card-content>
     {{ product.description }}

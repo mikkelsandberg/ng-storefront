@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
+import { DeleteProductDialogComponent } from '../admin/edit-products/delete-product-dialog/delete-product-dialog.component';
 import { EditProductDialogComponent } from '../admin/edit-products/edit-product-dialog/edit-product-dialog.component';
 import { IProduct } from '../product';
 
@@ -12,46 +13,66 @@ import { IProduct } from '../product';
 export class ProductComponent implements OnInit {
   @Input() product: IProduct;
   @Input() viewAsAdmin: boolean;
-  showEditButton = false;
+  showAdminButtons = false;
 
-  constructor(public editProductDialog: MatDialog) {}
+  constructor(
+    public editProductDialog: MatDialog,
+    public deleteProductDialog: MatDialog
+  ) {}
 
   ngOnInit() {}
 
   onMouseOverProductCard(): void {
     if (this.viewAsAdmin) {
-      this.showEditButton = true;
+      this.showAdminButtons = true;
     }
   }
 
   onMouseOutProductCard(): void {
     if (this.viewAsAdmin) {
-      this.showEditButton = false;
+      this.showAdminButtons = false;
     }
   }
 
   openEditProductDialog(): void {
-    console.log('clicked');
-    const editProductDialogRef = this.editProductDialog.open(
-      EditProductDialogComponent,
-      {
-        data: {
-          id: this.product.id,
-          name: this.product.name,
-          description: this.product.description,
-          price: this.product.price
-        }
-      }
-    );
+    if (!this.viewAsAdmin) {
+      return;
+    }
 
-    editProductDialogRef.afterClosed().subscribe(result => {
-      console.log('edit product dialog closed:', result);
+    this.editProductDialog.open(EditProductDialogComponent, {
+      data: {
+        id: this.product.id,
+        name: this.product.name,
+        description: this.product.description,
+        price: this.product.price
+      }
     });
   }
 
-  addProductToCart() {
+  openDeleteProductDialog(): void {
     if (!this.viewAsAdmin) {
-      console.log('add item to cart:', this.product.name);
+      return;
     }
+
+    this.deleteProductDialog.open(DeleteProductDialogComponent, {
+      data: {
+        id: this.product.id,
+        name: this.product.name
+      }
+    });
+  }
+
+  deleteProduct(): void {
+    if (!this.viewAsAdmin) {
+      return;
+    }
+    this.openDeleteProductDialog();
+  }
+
+  addProductToCart() {
+    if (this.viewAsAdmin) {
+      return;
+    }
+    console.log('add item to cart:', this.product.name);
   }
 }
