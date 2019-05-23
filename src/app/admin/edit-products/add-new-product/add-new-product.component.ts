@@ -13,7 +13,17 @@ export class AddNewProductComponent implements OnInit {
     id: null,
     name: null,
     description: null,
-    price: null
+    price: null,
+    media: {
+      images: [
+        {
+          id: null,
+          description: null,
+          thumbnailUrl: null,
+          regularUrl: null
+        }
+      ]
+    }
   };
 
   constructor(private productService: ProductService) {}

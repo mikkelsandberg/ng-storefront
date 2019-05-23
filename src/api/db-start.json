@@ -4,13 +4,57 @@
       "id": 1,
       "name": "Item 1",
       "description": "Reprehenderit duis in do aute tempor duis eiusmod nisi.",
-      "price": 19.99
+      "price": 19.99,
+      "media": {
+        "images": [
+          {
+            "id": 1,
+            "description": "Officia non labore voluptate pariatur laborum do ullamco officia laboris cupidatat ut Lorem.",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1556741533-4020f1bf081c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=50",
+            "regularUrl": "https://images.unsplash.com/photo-1556741533-4020f1bf081c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80"
+          },
+          {
+            "id": 2,
+            "description": "Amet elit laboris enim eu incididunt consectetur qui.",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1556227702-b89ac3b94ff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=50",
+            "regularUrl": "https://images.unsplash.com/photo-1556227702-b89ac3b94ff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80"
+          },
+          {
+            "id": 3,
+            "description": "Sunt sint commodo Lorem cillum eiusmod Lorem dolor Lorem officia ut sint.",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1558448477-7c50ef380059?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=50",
+            "regularUrl": "https://images.unsplash.com/photo-1558448477-7c50ef380059?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80"
+          }
+        ]
+      }
     },
     {
       "id": 2,
       "name": "Item 2",
       "description": "Dolor fugiat ipsum aliqua proident voluptate.",
-      "price": 4.99
+      "price": 4.99,
+      "media": {
+        "images": [
+          {
+            "id": 1,
+            "description": "Aliquip pariatur commodo occaecat culpa.",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1558452289-38d23eb23abf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=50",
+            "regularUrl": "https://images.unsplash.com/photo-1558452289-38d23eb23abf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80"
+          },
+          {
+            "id": 2,
+            "description": "Tempor ut enim commodo dolor cillum non ullamco proident ipsum esse irure commodo enim.",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1558458878-36802fc5f7f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=50",
+            "regularUrl": "https://images.unsplash.com/photo-1558458878-36802fc5f7f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80"
+          },
+          {
+            "id": 3,
+            "description": "Excepteur ex officia veniam adipisicing veniam sit duis non ipsum pariatur.",
+            "thumbnailUrl": "https://images.unsplash.com/photo-1558452451-b4de9dd5b540?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=50",
+            "regularUrl": "https://images.unsplash.com/photo-1558452451-b4de9dd5b540?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80"
+          }
+        ]
+      }
     }
   ]
 }
